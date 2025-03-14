@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FilterFriends
+
+A web application for finding and filtering coffee shops based on various criteria including drinks quality, study environment, and ambiance.
+
+## Features
+
+- Find coffee shops near your location
+- View ratings for drinks, study environment, and ambiance
+- Sort and filter coffee shops based on your preferences
+- View coffee shop details including address, hours, and photos
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Copy `.env.example` to `.env` and add your API keys
+4. Run the development server: `npm run dev`
+
+## Environment Variables
+
+This project requires the following environment variables:
+
+- `GOOGLE_MAPS_API_KEY`: Google Maps API key with Places API enabled
+- `OPENAI_API_KEY`: OpenAI API key (if using LLM features)
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Google Places API
+- OpenAI API (for review analysis)
+
+## Tech Stack
+
+- **Framework**: Next.js with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **API**: Google Places API for location data
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.x or later
+- A Google Maps API key with Places API enabled
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/filterfriends.git
+   cd filterfriends
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env.local` file in the root directory and add your Google Maps API key:
+   ```
+   GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+   ```
+
+   To get a Google Maps API key:
+   - Go to the [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a new project
+   - Enable the Places API
+   - Create an API key in the Credentials section
+   - Make sure to restrict the API key to only the Places API for security
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+## Usage
+
+1. Click the "Find Nearby Coffee Shops" button to detect your location
+2. Allow location access when prompted by your browser
+3. View the list of coffee shops near you
+4. Adjust the radius dropdown to expand or narrow your search
+
+## Deployment
+
+This application can be easily deployed to Vercel:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install -g vercel
+vercel
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure to add your `GOOGLE_MAPS_API_KEY` to the environment variables in your Vercel project settings.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## License
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Learn More
+## Acknowledgements
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Google Places API for providing coffee shop data
+- Next.js team for the amazing framework
+- Tailwind CSS for the styling utilities

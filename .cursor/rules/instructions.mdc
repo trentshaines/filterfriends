@@ -1,0 +1,82 @@
+---
+description: General Instructions
+globs: *
+alwaysApply: false
+---
+When debugging errors, please write 2 paragraphs before beginning debugging. 
+
+Anytime you are requested to do something, please think about alternative approaches before going ahead and implementing. 
+
+# Minimal Next.js TypeScript Project
+
+## Tech Stack Overview
+- Framework: Next.js with App Router
+- Language: TypeScript
+- Deployment: Vercel (or similar platform)
+
+## Project Structure
+```
+/
+├── app/                 # Next.js App Router directory
+│   ├── api/             # Simple API routes (if needed)
+│   ├── page.tsx         # Home page
+│   ├── layout.tsx       # Root layout
+│   └── globals.css      # Global styles
+├── components/          # React components (flat structure)
+├── lib/                 # Utility functions
+├── types/               # Essential TypeScript types
+├── public/              # Static assets
+├── next.config.js       # Next.js configuration
+└── package.json         # Project dependencies
+```
+
+## Minimal Coding Guidelines
+
+### TypeScript
+- Use TypeScript for basic type safety
+- Keep types simple but meaningful
+- Define interfaces only for core data structures
+
+### Next.js Components
+- Use server components by default
+- Add 'use client' directive only when necessary
+- Keep components small and focused
+- Minimize client-side JavaScript
+
+### API Routes (if needed)
+- Simple handler functions
+- Basic error handling
+- Minimal validation
+
+### State Management
+- Use React's built-in hooks (useState, useReducer)
+- Avoid complex state management libraries initially
+
+### Styling
+- Use Tailwind CSS or simple CSS Modules
+- Focus on mobile-first responsive design
+
+### Performance
+- Use Next.js built-in optimizations
+- Leverage server components to reduce client-side code
+
+### Deployment
+- Deploy to Vercel for simplest workflow
+- Use environment variables for configuration
+
+### Code Quality
+- Implement basic ESLint rules
+- Use Prettier for formatting
+
+## Development Workflow
+1. Development: `npm run dev`
+2. Build: `npm run build`
+3. Start: `npm start`
+
+## Remember
+- Start small and expand as needed
+- Add complexity only when required
+- Prioritize shipping over perfection
+- Keep dependencies minimal
+
+This minimal setup provides a solid foundation that can be deployed to production while remaining easy to maintain and extend as your project grows.
